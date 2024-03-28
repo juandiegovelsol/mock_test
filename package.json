@@ -1,0 +1,30 @@
+{
+  "name": "node-essentials-ts",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "dev:process": "ts-node src/process.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:process": "jest ./__tests__/process_data.test.ts",
+    "test:api": "jest --forceExit ./__tests__/api.test.ts"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.14",
+    "@types/jest": "^29.5.4",
+    "@types/node": "^20.6.0",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.1"
+  }
+}
