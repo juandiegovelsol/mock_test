@@ -1,11 +1,11 @@
 import express, { Request, Response } from "express";
-import {
+/* import {
   getAllTasks,
   getTaskById,
   createTask,
   updateTask,
   deleteTask,
-} from "./services/TaskService";
+} from "./services/TaskService"; */
 
 const router = express.Router();
 
@@ -14,7 +14,7 @@ router.get("/healthcheck", (_: Request, res: Response) => {
 });
 
 router.get("/", (req: Request, res: Response) => {
-  console.log("this is a test");
+  res.status(200).json({ message: "Server is ok" });
 });
 
 router.get("/:id", (req: Request, res: Response) => {});

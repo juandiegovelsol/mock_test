@@ -2,7 +2,7 @@
   "name": "node-essentials-ts",
   "private": true,
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "nodemon src/index.ts",
     "dev:process": "ts-node src/process.ts",
     "build": "tsc",
     "start": "node dist/index.js",
@@ -15,6 +15,7 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "nodemon": "^3.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
