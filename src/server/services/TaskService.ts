@@ -21,7 +21,6 @@ export const updateTask = async (id: string, taskData: Partial<Task>) => {
     if (task.id === id) {
       const taskKeys = Object.keys(task);
       let update: Task = { ...task };
-      console.log(update);
       taskDataKeys.forEach((key) => (update[key] = taskData[key]));
       return update;
     } else {
@@ -32,4 +31,11 @@ export const updateTask = async (id: string, taskData: Partial<Task>) => {
   return updatedTaskList;
 };
 
-export const deleteTask = async (id: string) => {};
+export const deleteTask = async (id: string) => {
+  taskList1.forEach((task, index) => {
+    if (task.id === id) {
+      taskList1.splice(index, 1);
+    }
+  });
+  return taskList1;
+};

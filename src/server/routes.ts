@@ -38,6 +38,10 @@ router.put("/:id", async (req: Request, res: Response) => {
   res.status(200).json(taskList);
 });
 
-router.delete("/:id", (req: Request, res: Response) => {});
+router.delete("/:id", async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const taskList = await deleteTask(id);
+  res.status(200).json(taskList);
+});
 
 export default router;
