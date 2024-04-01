@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import router from "./server/routes";
-/* import { handleErrors } from './server/middleware'; */
+import { handleErrors } from "./server/middleware";
 
 const app = express();
 const PORT = 3000;
@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use(handleErrors);
 app.use("", router);
 
 app.listen(PORT, () => {
